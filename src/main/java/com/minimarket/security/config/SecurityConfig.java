@@ -9,10 +9,15 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+<<<<<<< HEAD
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 
 @Configuration
 @EnableMethodSecurity
+=======
+
+@Configuration
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
 public class SecurityConfig {
 
     private final CustomUserDetailsService customUserDetailsService;

@@ -4,7 +4,10 @@ import com.minimarket.entity.Venta;
 import com.minimarket.service.VentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+<<<<<<< HEAD
 import org.springframework.security.access.prepost.PreAuthorize;
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,7 +31,10 @@ public class VentaController {
     }
 
     @PostMapping
+<<<<<<< HEAD
     @PreAuthorize("hasRole('CAJERO')")
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
     public Venta guardarVenta(@RequestBody Venta venta) {
         return ventaService.save(venta);
     }

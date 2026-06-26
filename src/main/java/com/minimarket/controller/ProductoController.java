@@ -5,7 +5,10 @@ import com.minimarket.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+<<<<<<< HEAD
 import org.springframework.security.access.prepost.PreAuthorize;
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
 
 import java.util.List;
 
@@ -28,13 +31,19 @@ public class ProductoController {
     }
 
     @PostMapping
+<<<<<<< HEAD
     @PreAuthorize("hasRole('ADMIN')")
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
     public Producto guardarProducto(@RequestBody Producto producto) {
         return productoService.save(producto);
     }
 
     @PutMapping("/{id}")
+<<<<<<< HEAD
     @PreAuthorize("hasRole('ADMIN')")
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
     public ResponseEntity<Producto> actualizarProducto(@PathVariable Long id, @RequestBody Producto producto) {
         Producto productoExistente = productoService.findById(id);
         if (productoExistente != null) {
@@ -45,7 +54,10 @@ public class ProductoController {
     }
 
     @DeleteMapping("/{id}")
+<<<<<<< HEAD
     @PreAuthorize("hasRole('ADMIN')")
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
     public ResponseEntity<Void> eliminarProducto(@PathVariable Long id) {
         Producto producto = productoService.findById(id);
         if (producto != null) {

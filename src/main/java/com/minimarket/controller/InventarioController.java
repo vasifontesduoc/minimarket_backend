@@ -5,7 +5,10 @@ import com.minimarket.service.InventarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+<<<<<<< HEAD
 import org.springframework.security.access.prepost.PreAuthorize;
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
 
 import java.util.List;
 
@@ -28,13 +31,19 @@ public class InventarioController {
     }
 
     @PostMapping
+<<<<<<< HEAD
     @PreAuthorize("hasAnyRole('ADMIN','CAJERO')")
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
     public Inventario registrarMovimiento(@RequestBody Inventario inventario) {
         return inventarioService.save(inventario);
     }
 
     @PutMapping("/{id}")
+<<<<<<< HEAD
     @PreAuthorize("hasAnyRole('ADMIN','CAJERO')")
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
     public ResponseEntity<Inventario> actualizarMovimiento(@PathVariable Long id, @RequestBody Inventario inventario) {
         Inventario existente = inventarioService.findById(id);
         if (existente != null) {
@@ -45,7 +54,10 @@ public class InventarioController {
     }
 
     @DeleteMapping("/{id}")
+<<<<<<< HEAD
     @PreAuthorize("hasAnyRole('ADMIN','CAJERO')")
+=======
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
     public ResponseEntity<Void> eliminarMovimiento(@PathVariable Long id) {
         Inventario inventario = inventarioService.findById(id);
         if (inventario != null) {

@@ -101,8 +101,23 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
+<<<<<<< HEAD
 				<version>0.8.12</version>
 				<executions>
+=======
+				<version>0.8.10</version>
+
+				<configuration>
+
+					<includes>
+						<include>com/minimarket/entity/*</include>
+					</includes>
+
+				</configuration>
+
+				<executions>
+
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
 					<execution>
 						<goals>
 							<goal>prepare-agent</goal>
@@ -111,12 +126,25 @@
 
 					<execution>
 						<id>report</id>
+<<<<<<< HEAD
 						<phase>verify</phase>
 						<goals>
 							<goal>report</goal>
 						</goals>
 					</execution>
 				</executions>
+=======
+						<phase>test</phase>
+
+						<goals>
+							<goal>report</goal>
+						</goals>
+
+					</execution>
+
+				</executions>
+
+>>>>>>> 708ef1961e4ef6b0ae0d7018d6708deac09b367e
 			</plugin>
 		</plugins>
 	</build>
